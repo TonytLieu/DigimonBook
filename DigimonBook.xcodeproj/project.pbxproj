@@ -25,6 +25,12 @@
 		EB6034882CA3B98900F00BC9 /* HomeDigimonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6034872CA3B98900F00BC9 /* HomeDigimonTests.swift */; };
 		EB60348A2CA3BA0E00F00BC9 /* DigimonDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6034892CA3BA0E00F00BC9 /* DigimonDetailTests.swift */; };
 		EBEBE7D92CA3067E00E4681A /* DigimonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBE7D82CA3067E00E4681A /* DigimonDetail.swift */; };
+		EBEBE7DF2CA64EFE00E4681A /* MarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBE7DE2CA64EFE00E4681A /* MarketView.swift */; };
+		EBEBE7E12CA65E4500E4681A /* HotDealSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBE7E02CA65E4500E4681A /* HotDealSectionView.swift */; };
+		EBEBE7E32CA65EB300E4681A /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBE7E22CA65EB300E4681A /* Items.swift */; };
+		EBEBE7E52CA65F5000E4681A /* TrendingSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBE7E42CA65F5000E4681A /* TrendingSectionView.swift */; };
+		EBEBE7E92CA689D100E4681A /* TopSectionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBE7E82CA689D000E4681A /* TopSectionalView.swift */; };
+		EBEBE7EC2CA68F2100E4681A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBE7EB2CA68F2100E4681A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,12 @@
 		EB6034872CA3B98900F00BC9 /* HomeDigimonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDigimonTests.swift; sourceTree = "<group>"; };
 		EB6034892CA3BA0E00F00BC9 /* DigimonDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonDetailTests.swift; sourceTree = "<group>"; };
 		EBEBE7D82CA3067E00E4681A /* DigimonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonDetail.swift; sourceTree = "<group>"; };
+		EBEBE7DE2CA64EFE00E4681A /* MarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketView.swift; sourceTree = "<group>"; };
+		EBEBE7E02CA65E4500E4681A /* HotDealSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDealSectionView.swift; sourceTree = "<group>"; };
+		EBEBE7E22CA65EB300E4681A /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		EBEBE7E42CA65F5000E4681A /* TrendingSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingSectionView.swift; sourceTree = "<group>"; };
+		EBEBE7E82CA689D000E4681A /* TopSectionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSectionalView.swift; sourceTree = "<group>"; };
+		EBEBE7EB2CA68F2100E4681A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +171,7 @@
 		EB60346D2CA1E33200F00BC9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBEBE7EA2CA68EFA00E4681A /* Constants */,
 				EB6034732CA1E3AE00F00BC9 /* DigimonBook.swift */,
 			);
 			path = Model;
@@ -179,6 +192,11 @@
 			children = (
 				EB6034452CA1E32800F00BC9 /* HomeDigimon.swift */,
 				EBEBE7D82CA3067E00E4681A /* DigimonDetail.swift */,
+				EBEBE7DE2CA64EFE00E4681A /* MarketView.swift */,
+				EBEBE7E02CA65E4500E4681A /* HotDealSectionView.swift */,
+				EBEBE7E42CA65F5000E4681A /* TrendingSectionView.swift */,
+				EBEBE7E22CA65EB300E4681A /* Items.swift */,
+				EBEBE7E82CA689D000E4681A /* TopSectionalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,6 +240,14 @@
 				EB60347B2CA3358000F00BC9 /* DigimonBookModelTests.swift */,
 			);
 			path = TestingModel;
+			sourceTree = "<group>";
+		};
+		EBEBE7EA2CA68EFA00E4681A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EBEBE7EB2CA68F2100E4681A /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,12 +380,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBEBE7E12CA65E4500E4681A /* HotDealSectionView.swift in Sources */,
+				EBEBE7E92CA689D100E4681A /* TopSectionalView.swift in Sources */,
 				EBEBE7D92CA3067E00E4681A /* DigimonDetail.swift in Sources */,
 				EB6034462CA1E32800F00BC9 /* HomeDigimon.swift in Sources */,
+				EBEBE7DF2CA64EFE00E4681A /* MarketView.swift in Sources */,
 				EB6034722CA1E35E00F00BC9 /* ApiEndpoints.swift in Sources */,
+				EBEBE7E32CA65EB300E4681A /* Items.swift in Sources */,
 				EB6034742CA1E3AE00F00BC9 /* DigimonBook.swift in Sources */,
+				EBEBE7E52CA65F5000E4681A /* TrendingSectionView.swift in Sources */,
 				EB6034762CA1E44D00F00BC9 /* NetworkDigimon.swift in Sources */,
 				EB60347A2CA3332F00F00BC9 /* NetworkErrorCases.swift in Sources */,
+				EBEBE7EC2CA68F2100E4681A /* Constants.swift in Sources */,
 				EB6034442CA1E32800F00BC9 /* DigimonBookApp.swift in Sources */,
 				EB6034782CA1E8C000F00BC9 /* DigimonMachine.swift in Sources */,
 			);

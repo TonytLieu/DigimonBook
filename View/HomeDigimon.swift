@@ -10,21 +10,29 @@ import SwiftUI
 struct HomeDigimon: View {
     @StateObject var digimonViewMachine = digimonMachine()
     var DigiWorldEndpoint = ApiEndpoints().digimonEndpoint
-    
+    var constants = Constants()
     var body: some View {
-        Button("Refresh") {
-            refreshButton()
-        }
-        
         NavigationStack {
+            HStack {
+                Button("Refresh") {
+                    refreshButton()
+                }
+                Spacer().frame(width: 40)
+                NavigationLink(constants.marketTitle) {
+                    MarketView()
+                }
+            }
             List(digimonViewMachine.digimonBook) { digimonBook in
-               NavigationLink(digimonBook.name,
-                              destination: DigimonDetail(digimonImage: digimonBook.img ?? "noImage",
-                                                         digimonName: digimonBook.name,
-                                                         digimonLevel: digimonBook.level ?? "0"))
-           }.onAppear() {
-               digimonViewMachine.getDigimonBook(url: DigiWorldEndpoint)
-           }
+                NavigationLink(digimonBook.name,
+                               destination: DigimonDetail(digimonData: digimonBook))
+            }.onAppear() {
+                digimonViewMachine.getDigimonBook(url: DigiWorldEndpoint)
+                if digimonViewMachine.customError == nil{
+                    
+                }else {
+                    
+                }
+            }
         }
     }
     
