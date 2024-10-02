@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeDigimon: View {
     @StateObject var digimonViewMachine = digimonMachine()
+    @State var textName = "Tony"
     var DigiWorldEndpoint = ApiEndpoints().digimonEndpoint
     var constants = Constants()
     var body: some View {
@@ -23,8 +24,8 @@ struct HomeDigimon: View {
                 }
             }
             List(digimonViewMachine.digimonBook) { digimonBook in
-                NavigationLink(digimonBook.name,
-                               destination: DigimonDetail(digimonData: digimonBook))
+                NavigationLink(digimonBook.name + " " + textName,
+                               destination: DigimonDetail(digimonData: digimonBook, textName: $textName))
             }.onAppear() {
                 digimonViewMachine.getDigimonBook(url: DigiWorldEndpoint)
                 if digimonViewMachine.customError == nil{
@@ -34,6 +35,7 @@ struct HomeDigimon: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     func refreshButton(){

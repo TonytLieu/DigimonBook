@@ -35,6 +35,7 @@ struct MarketView: View {
                 }
                 .padding(.horizontal, 16)
             }
+            .navigationBarBackButtonHidden(true)
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)

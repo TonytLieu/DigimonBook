@@ -12,9 +12,6 @@ struct Items: View {
     var body: some View {
         VStack{
             AsyncImage(url: URL(string: "https://digimon.shadowsmith.com/img/koromon.jpg"), scale: 1.5)
-                .frame(maxWidth: constants.maxPictureSize,
-                       maxHeight: constants.maxPictureSize,
-                       alignment: .leading)
             Text("Item #1 Name")
                 .frame(maxWidth: .infinity, 
                        alignment: .leading)

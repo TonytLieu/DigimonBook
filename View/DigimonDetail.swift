@@ -10,12 +10,13 @@ import SwiftUI
 struct DigimonDetail: View {
     @State var changeText = ""
     var digimonData: DigimonBook?
-    var digimonName: String?
+   @Binding var textName: String
     var constants = Constants()
     
     var body: some View {
         VStack{
             AsyncImage(url: URL(string: digimonData?.img ?? "https://digimon.shadowsmith.com/img/koromon.jpg"), scale: 1)
+            Text(textName)
             Text(digimonData?.name ?? "koncha")
             Text(digimonData?.level ?? "In Training")
             TextField("Name", text: $changeText)
@@ -34,12 +35,17 @@ struct DigimonDetail: View {
                     .fill(Color.white)
             )
         }
+        .navigationBarBackButtonHidden(true)
     }
     func changeName(name: String){
-        digimonData?.name = name
+        textName = name
     }
 }
 
-#Preview {
-    DigimonDetail(digimonData: nil)
+struct DigimonDetail_Previews: PreviewProvider {
+    @State static var previewName = "Agumon" // Dummy state for the preview
+
+    static var previews: some View {
+        DigimonDetail(digimonData: nil, textName: $previewName) // Pass the binding to previewName
+    }
 }
